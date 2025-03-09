@@ -2,11 +2,17 @@
 from app import add_numbers, main
 
 def test_add_numbers():
-    assert add_numbers() == 2  # Checks if 1 + 1 = 2
+    print("Testing if 1 + 1 equals 2...")
+    result = add_numbers()
+    assert result == 2
+    print(f"Math works! Result is {result}")
 
 def test_main_runs():
+    print("Checking if the app runs...")
     try:
-        main()  # Runs the app
-        assert True  # If it runs, we’re good
+        main()  # This already prints "1 + 1 = 2"
+        assert True
+        print("App ran perfectly!")
     except:
-        assert False  # If it crashes, fail
+        assert False
+        print("Oops, app crashed!")
