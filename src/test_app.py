@@ -2,15 +2,15 @@
 from app import add_numbers, main
 
 def test_add_numbers():
-    print("Testing if 1 + 1 equals 2...")
-    result = add_numbers()
-    assert result == 2
+    print("Testing if 1 + 2 equals 3...")
+    result = add_numbers(1, 2)
+    assert result == 3
     print(f"Math works! Result is {result}")
 
 def test_main_runs():
     print("Checking if the app runs...")
     try:
-        main()  # This already prints "1 + 1 = 2"
+        main()  # Prints "1 + 2 = 3"
         assert True
         print("App ran perfectly!")
     except:
